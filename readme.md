@@ -1,13 +1,38 @@
-### Preparation and Overview (3 points total)
+## Preparation and Overview (3 points total)
 
 [2 points] Explain the task and what business-case or use-case it is designed to solve (or designed to investigate). Detail exactly what the classification task is and what parties would be interested in the results. For example, would the model be deployed or used mostly for offline analysis? As in previous labs, also detail how good the classifier needs to perform in order to be useful. 
 
+The task involves performing classification on a dataset containing features of mobile phones and the last column being the price range of each phone. The goal is to build a model that can accurately predict the class or price range of a mobile phone based on its features.
+
+Here are a few use cases for our model:
+
+Pricing Strategy: Mobile phone manufacturers or retailers could use the model to estimate the price range of new or upcoming models based on their features. This could help in setting profitable price for their products.
+
+Customer Recommendations: E-commerce platforms or mobile carriers can use the model to recommend mobile phones to customers based on their budget and desired features. Or, the customer himself can see which phone is the best for them.
+
+Fraud Detection: In cases where mobile phones are sold through online stores, the model can help in detecting fraudulent listings by flagging phones with features that don't match with their reported price range.
+
+Parties interested in the results could include:
+Mobile phone manufacturers
+Retailers
+E-commerce platforms
+Fraud detection agencies
+Someone who wants to buy a phone
+
+This can be used as an offline model for Mobile Manufacturers and retailers.
+And can work online for E-commerce platforms, and fraud detection.
+
+
 [.5 points] (mostly the same processes as from previous labs) Define and prepare your class variables. Use proper variable representations (int, float, one-hot, etc.). Use pre-processing methods (as needed) for dimensionality reduction, scaling, etc. Remove variables that are not needed/useful for the analysis (give reasoning). Describe the final dataset that is used for classification/regression (include a description of any newly formed variables you created). Provide a breakdown of the variables after preprocessing (such as the mean, std, etc. for all variables, including numeric and categorical). 
+<mark> it mentions scaling, do we add the code that co pilot gave the thing that greatly increased our performance? </mark>
+
+We made a feature correlation plot to determine which features 
+
 
 [.5 points] Divide your data into training and testing splits using an 80% training and 20% testing split. Use the cross validation modules that are part of scikit-learn. Argue "for" or "against" splitting your data using an 80/20 split. That is, why is the 80/20 split appropriate (or not) for your dataset?  
-(ours it a large dataset, so we could probably use a 90/10 split. Use copilot to explain)
+<mark> ours it a large dataset, so we could probably use a 90/10 split. Use copilot to explain </mark>
 
-### Modeling (5 points total)
+## Modeling (5 points total)
 
 The implementation of logistic regression must be written only from the examples given to you by the instructor. No credit will be assigned to teams that copy implementations from another source, regardless of if the code is properly cited. 
 
@@ -23,11 +48,11 @@ Is your method of selecting parameters justified? That is, do you think there is
 
 [1.5 points] Compare the performance of your "best" logistic regression optimization procedure to the procedure used in scikit-learn. Visualize the performance differences in terms of training time and classification performance. Discuss the results. 
 
-### Deployment (1 points total)
+## Deployment (1 points total)
 
 Which implementation of logistic regression would you advise be used in a deployed machine learning model, your implementation or scikit-learn (or other third party implementation)? Why?
 
-### Exceptional Work (1 points total)
+## Exceptional Work (1 points total)
 
 You have free reign to provide additional analyses. One idea: Update the code to use either "one-versus-all" or "one-versus-one" extensions of binary to multi-class classification. 
 
