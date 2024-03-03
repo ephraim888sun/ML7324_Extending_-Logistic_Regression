@@ -31,7 +31,13 @@ We made a feature correlation plot to determine which features have the most pos
 
 [.5 points] Divide your data into training and testing splits using an 80% training and 20% testing split. Use the cross validation modules that are part of scikit-learn. Argue "for" or "against" splitting your data using an 80/20 split. That is, why is the 80/20 split appropriate (or not) for your dataset?  
 
-<mark> ours it a large dataset, so we could probably use a 90/10 split. Use copilot to explain </mark> i think this is not a good idea, becuase there is a chance for it to overfit
+Since the dataset is clean, there's less need for extensive validation or tuning. With a clean dataset, models are less likely to encounter unexpected challenges during training, making an 80/20 split suitable for efficient model development.
+
+A larger validation set could enhance its ability to classify unseen data in the future. So if it is smaller than 20%, generally there is a less chance for over fitting.
+
+if there are plans to scale the dataset or tackle more complex problems in the future, using a larger validation(even more than 20%) set now could help future-proof the model
+
+<mark> ours it a large dataset, so we could probably use a 90/10 split. Use copilot to explain </mark> i personally (can be wrong) think this is not a good idea, becuase there is a chance for it to overfit
 
 <mark> Did we use cross validation?</mark>
 
