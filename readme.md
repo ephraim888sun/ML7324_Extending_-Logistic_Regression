@@ -55,7 +55,11 @@ Update the gradient calculation to include a customizable regularization term (e
 
 Is your method of selecting parameters justified? That is, do you think there is any "data snooping" involved with this method of selecting parameters?
 
+<mark> 
+
 [1.5 points] Compare the performance of your "best" logistic regression optimization procedure to the procedure used in scikit-learn. Visualize the performance differences in terms of training time and classification performance. Discuss the results. 
+
+There is not 
 
 ## Deployment (1 points total)
 
