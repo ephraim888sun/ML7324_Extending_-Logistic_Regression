@@ -55,24 +55,30 @@ Update the gradient calculation to include a customizable regularization term (e
 
 Is your method of selecting parameters justified? That is, do you think there is any "data snooping" involved with this method of selecting parameters?
 
-<mark> 
+<mark> because we are Brute Forcing all possibilities to find the best accuracy, </mark>
 
 [1.5 points] Compare the performance of your "best" logistic regression optimization procedure to the procedure used in scikit-learn. Visualize the performance differences in terms of training time and classification performance. Discuss the results. 
 
-There is not 
+
 
 ## Deployment (1 points total)
 
 Which implementation of logistic regression would you advise be used in a deployed machine learning model, your implementation or scikit-learn (or other third party implementation)? Why?
 
+Our implementation gives an accurancy of 0.99 when doing one versus all with Hessian Binary Logistic Regression with L1&L2 [(L1 + L2) = |w| + w^2 = c + 2cw] regularisation.
+
+
+
 ## Exceptional Work (1 points total)
 
-You have free reign to provide additional analyses. One idea: Update the code to use either "one-versus-all" or "one-versus-one" extensions of binary to multi-class classification. 
+ Implement an optimization technique for logistic regression using mean square error as your objective function (instead of maximum likelihood). 
 
-Required for 7000 level students: Implement an optimization technique for logistic regression using mean square error as your objective function (instead of maximum likelihood). Derive the gradient updates for the Hessian and use Newton's method to update the values of "w". Then answer, which process do you prefer: maximum likelihood OR minimum mean-squared error?
+Derive the gradient updates for the Hessian and use Newton's method to update the values of "w".
+
+Then answer, which process do you prefer: maximum likelihood OR minimum mean-squared error?
+
+
 
 L1 regularization  is |wsub1|
 L2 is 2cw (derivative of w^2)
 L1 and L2 is summing them (L1 + L2) = |w| + w^2 = c + 2cw
-
-use her code (a for loop) to find the best c
