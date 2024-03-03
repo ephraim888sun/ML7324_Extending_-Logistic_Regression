@@ -26,11 +26,14 @@ And can work online for E-commerce platforms, and fraud detection.
 [.5 points] (mostly the same processes as from previous labs) Define and prepare your class variables. Use proper variable representations (int, float, one-hot, etc.). Use pre-processing methods (as needed) for dimensionality reduction, scaling, etc. Remove variables that are not needed/useful for the analysis (give reasoning). Describe the final dataset that is used for classification/regression (include a description of any newly formed variables you created). Provide a breakdown of the variables after preprocessing (such as the mean, std, etc. for all variables, including numeric and categorical). 
 <mark> it mentions scaling, do we add the code that co pilot gave the thing that greatly increased our performance? </mark>
 
-We made a feature correlation plot to determine which features 
+We made a feature correlation plot to determine which features have the most positive trend with our classification. And we selected <mark> RAM, px_height...... the rest is in code</mark>
 
 
 [.5 points] Divide your data into training and testing splits using an 80% training and 20% testing split. Use the cross validation modules that are part of scikit-learn. Argue "for" or "against" splitting your data using an 80/20 split. That is, why is the 80/20 split appropriate (or not) for your dataset?  
-<mark> ours it a large dataset, so we could probably use a 90/10 split. Use copilot to explain </mark>
+
+<mark> ours it a large dataset, so we could probably use a 90/10 split. Use copilot to explain </mark> i think this is not a good idea, becuase there is a chance for it to overfit
+
+<mark> Did we use cross validation?</mark>
 
 ## Modeling (5 points total)
 
